@@ -13,7 +13,7 @@ class UsersController < ApplicationController
         if @user.save
           reset_session
           log_in @user
-          flash[:success] = "Welcome to AlumniNet!"
+          flash[:success] = "UnemploymentNet!"
           redirect_to '/'
         else
           render 'new'

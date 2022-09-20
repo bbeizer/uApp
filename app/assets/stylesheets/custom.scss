@@ -103,6 +103,24 @@ footer {
     margin-left: 15px;
   }
 
+  @media (max-width: 800px) {
+    footer {
+      small {
+        display: block;
+        float: none;
+        margin-bottom: 1em;
+      }
+      ul {
+        float: none;
+        padding: 0;
+        li {
+          float: none;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
   /* sidebar */
 
 aside {
@@ -146,7 +164,7 @@ input, textarea, select, .uneditable-input {
     border: 1px solid #bbb;
     width: 100%;
     margin-bottom: 15px;
-    @include box_sizing;
+    @include box_sizing(border-box);
   }
   
   input {

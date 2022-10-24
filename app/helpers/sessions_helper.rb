@@ -34,15 +34,13 @@ end
 
  # Returns true if the user is logged in, false otherwise.
  def logged_in?
-    !current_user.nil?
-  end
+  !current_user.nil?
 end
 
-  # Logs out the current user.
-  def log_out
+# Logs out the current user.
+def log_out
     reset_session
     @current_user = nil
-  end
 end
 
   # Forgets a persistent session.
@@ -52,17 +50,16 @@ end
     cookies.delete(:remember_token)
   end
 
-    # Logs out the current user.
+  # Logs out the current user.
   def log_out
     forget(current_user)
     reset_session
     @current_user = nil
   end
   
-  # Stores the URL trying to be accessed.
-  def store_location
-    session[:forwarding_url] = request.original_url if request.get?
-  end
+# Stores the URL trying to be accessed.
+def store_location
+  session[:forwarding_url] = request.original_url if request.get?
 end
 
 end
